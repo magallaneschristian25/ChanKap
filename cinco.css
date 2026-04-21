@@ -1,0 +1,416 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font for modern look */
+}
+
+body {
+    background-color: #f5e9d8;
+    color: #3a2618;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* -------------------------- */
+/* Responsive Navigation Menu */
+/* -------------------------- */
+.main-nav {
+    background-color: #8b5a2b;
+    color: white;
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo i {
+    color: #fcd34d; /* Accent color for coffee icon */
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.2s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    border-color: #fcd34d;
+    color: #fcd34d;
+}
+
+/* -------------------------- */
+/* Page Header & Footer */
+/* -------------------------- */
+.page-header {
+    text-align: center;
+    padding: 3rem 5%;
+    background: linear-gradient(135deg, #8b5a2b 0%, #a67c52 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-footer {
+    text-align: center;
+    padding: 1.8rem;
+    background-color: #8b5a2b;
+    color: white;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-footer i {
+    color: #fcd34d;
+    margin: 0 0.3rem;
+}
+
+/* -------------------------- */
+/* Shop Grid Layout */
+/* -------------------------- */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.2rem;
+    padding: 3.5rem 5%;
+}
+
+.shop-card {
+    background-color: white;
+    border-radius: 12px; /* Rounded corners for modern look */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.shop-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8b5a2b, #fcd34d);
+}
+
+.shop-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.shop-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.shop-card:hover img {
+    transform: scale(1.05);
+}
+
+.shop-card h2 {
+    padding: 1.2rem 0 0.6rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d1f12;
+}
+
+.shop-card p {
+    padding: 0 1.2rem 1rem;
+    font-size: 0.95rem;
+    color: #5a422a;
+}
+
+.view-menu-btn {
+    background: linear-gradient(135deg, #8b5a2b 0%, #a67c52 100%);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 1.2rem 1.8rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(139, 90, 43, 0.2);
+}
+
+.view-menu-btn:hover {
+    background: linear-gradient(135deg, #a67c52 0%, #8b5a2b 100%);
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(139, 90, 43, 0.3);
+}
+
+/* -------------------------- */
+/* About Section */
+/* -------------------------- */
+.about-section {
+    padding: 3rem 5%;
+    text-align: center;
+    background-color: white;
+    margin: 0 5% 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    color: #2d1f12;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #fcd34d;
+}
+
+.about-section p {
+    font-size: 1.05rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #5a422a;
+    line-height: 1.8;
+}
+
+/* -------------------------- */
+/* Menu Modals */
+/* -------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(45, 31, 18, 0.7);
+    backdrop-filter: blur(4px); /* Soft blur background */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 8% auto;
+    padding: 2.2rem;
+    border-radius: 12px;
+    width: 92%;
+    max-width: 650px;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: modalFadeIn 0.4s ease forwards;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    color: #888;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #2d1f12;
+}
+
+.modal-content h3 {
+    font-size: 1.6rem;
+    color: #2d1f12;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #f5e9d8;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+}
+
+.menu-category h4 {
+    color: #8b5a2b;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-bottom: 2px solid #fcd34d;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.menu-category ul {
+    list-style: none;
+    line-height: 1.9;
+}
+
+.menu-category li,
+.menu-category p {
+    font-size: 0.95rem;
+    color: #5a422a;
+}
+
+.menu-category li::before {
+    content: '☕ '; /* Coffee icon bullet point */
+    margin-right: 0.3rem;
+    color: #8b5a2b;
+}
+
+/* -------------------------- */
+/* Responsive Media Queries */
+/* -------------------------- */
+/* Tablet (1199px and below) */
+@media (max-width: 1199px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+        padding: 2.5rem 4%;
+    }
+
+    .page-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .about-section {
+        margin: 0 4% 2.5rem;
+    }
+}
+
+/* Mobile (767px and below) */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #8b5a2b;
+        flex-direction: column;
+        padding: 1.2rem 5%;
+        gap: 1.2rem;
+        display: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 3%;
+    }
+
+    .page-header {
+        padding: 2.2rem 3%;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .shop-card img {
+        height: 190px;
+    }
+
+    .modal-content {
+        margin: 15% auto;
+        padding: 1.8rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .nav-logo h2 {
+        font-size: 1.1rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .view-menu-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
