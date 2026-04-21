@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negros Occidental Coffee Shop Directory</title>
+    <link rel="stylesheet" href="cinco.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Responsive Navigation Menu -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <h2><i class="fas fa-coffee"></i> Negros Coffee Guide</h2>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#all" class="filter-link active">All Shops</a></li>
+            <li><a href="#kabankalan" class="filter-link">Kabankalan City</a></li>
+            <li><a href="#bacolod" class="filter-link">Bacolod City</a></li>
+            <li><a href="#sipalay" class="filter-link">Sipalay City</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Negros Occidental Coffee Shops</h1>
+        <p>Discover local spots for great brew & community</p>
+    </header>
+
+    <main class="shop-grid" id="shop-grid">
+        <!-- Downtown Brew Hub -->
+        <div class="shop-card" data-city="kabankalan">
+            <img src="cinco.png" alt="Downtown Brew Hub">
+            <h2>Downtown Brew Hub</h2>
+            <p>Kabankalan City | Brgy. City Proper</p>
+            <p>Specialty espresso & open mic nights</p>
+            <button class="view-menu-btn" data-target="modal1">View Menu</button>
+        </div>
+
+        <!-- Mountain Roast Cafe -->
+        <div class="shop-card" data-city="bacolod">
+            <img src="cinco1.png" alt="Mountain Roast Cafe">
+            <h2>Mountain Roast Cafe</h2>
+            <p>Bacolod City | Brgy. Mandalagan</p>
+            <p>Highland-grown beans & pastry pairings</p>
+            <button class="view-menu-btn" data-target="modal2">View Menu</button>
+        </div>
+
+        <!-- Coastal Grind -->
+        <div class="shop-card" data-city="sipalay">
+            <img src="cinco2.png" alt="Coastal Grind">
+            <h2>Coastal Grind</h2>
+            <p>Sipalay City | Brgy. Punta Ballo</p>
+            <p>Beachfront seating & cold brew specials</p>
+            <button class="view-menu-btn" data-target="modal3">View Menu</button>
+        </div>
+
+        <!-- Camingawan Coffee Corner -->
+        <div class="shop-card" data-city="kabankalan">
+            <img src="cinco3.png" alt="Camingawan Coffee Corner">
+            <h2>Camingawan Coffee Corner</h2>
+            <p>Kabankalan City | Brgy. Camingawan</p>
+            <p>Local roasts & barista workshops</p>
+            <button class="view-menu-btn" data-target="modal4">View Menu</button>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About This Guide</h2>
+        <p>Curated to highlight Negros Occidental's thriving coffee culture, this directory features locally-owned shops that prioritize quality beans, community engagement, and sustainable practices.</p>
+    </section>
+
+    <!-- Modals for Shop Menus -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Downtown Brew Hub - Menu</h3>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h4>Specialty Espresso</h4>
+                    <ul>
+                        <li>Classic Espresso - ₱80</li>
+                        <li>Flat White - ₱120</li>
+                        <li>Honeycomb Latte - ₱140</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h4>Snacks</h4>
+                    <ul>
+                        <li>Chocolate Croissant - ₱75</li>
+                        <li>Lemon Drizzle Cake - ₱90</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h4>Events</h4>
+                    <p>Open Mic Nights - Every Friday, 7PM onwards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Mountain Roast Cafe - Menu</h3>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h4>Highland Coffee</h4>
+                    <ul>
+                        <li>Negros Highland Brew - ₱100</li>
+                        <li>Cappuccino (Highland Bean) - ₱130</li>
+                        <li>Pour-Over - ₱150</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h4>Pastry Pairings</h4>
+                    <ul>
+                        <li>Ube Cheese Muffin - ₱65</li>
+                        <li>Butterscotch Tart - ₱85</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Coastal Grind - Menu</h3>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h4>Cold Brew Specials</h4>
+                    <ul>
+                        <li>Classic Cold Brew - ₱120</li>
+                        <li>Coconut Cold Brew - ₱140</li>
+                        <li>Espresso Tonic - ₱130</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h4>Beach Snacks</h4>
+                    <ul>
+                        <li>Coconut Macaroons - ₱60</li>
+                        <li>Grilled Pineapple Pastry - ₱80</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Camingawan Coffee Corner - Menu</h3>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h4>Local Roasts</h4>
+                    <ul>
+                        <li>Camingawan Dark Roast - ₱90</li>
+                        <li>Light Roast Drip - ₱100</li>
+                        <li>Mocha (Local Cacao Blend) - ₱130</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h4>Workshops</h4>
+                    <ul>
+                        <li>Home Brewing Basics - ₱800/person</li>
+                        <li>Latte Art Workshop - ₱1,200/person</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2026 Negros Coffee Guide | <i class="fas fa-map-marker-alt"></i> Negros Occidental, Philippines</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
